@@ -1,0 +1,7 @@
+<a routerLink="/book-store/new">Crear nuevo libro</a>
+@for (libro of libros; track libro.id) {
+<h1>{{ libro.titulo }}</h1>
+<h2>{{ libro.autor }}</h2>
+}@empty {
+<p>No hay libros disponibles.</p>
+}
