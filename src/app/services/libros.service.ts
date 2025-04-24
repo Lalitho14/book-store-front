@@ -23,8 +23,8 @@ export class LibrosService {
     return this.http.post<Libro>(this.url, book);
   }
 
-  updateLibro(book: Libro) {
-    return this.http.put(this.url, book);
+  updateLibro(book: Libro, id: number) {
+    return this.http.put(`${this.url}/${id}`, book);
   }
 
   deleteLibro(id: number) {

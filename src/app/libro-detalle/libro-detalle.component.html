@@ -1,0 +1,28 @@
+<div
+  class="flex flex-column flex-wrap gap-5 justify-content-start align-items-center min-h-screen w-ful"
+>
+  <p-button routerLink="/" icon="pi pi-arrow-left" label="Regresar" class="m-3"></p-button>
+
+  <p-card
+    header="{{ libro?.titulo }}"
+    subheader="{{ libro?.autor }}"
+    [style]="{ width: '400px' }"
+    class="flex"
+  >
+    <p class="m-0">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis velit
+      quidem non quisquam molestiae earum unde accusantium quia deserunt sunt
+      quae inventore nihil facere fugiat aut, in, vel corrupti quis?
+    </p>
+    <ng-template pTemplate="footer">
+      <div class="flex gap-3 mt-1">
+        <h4 class="w-full text-center" styleClass="w-full">
+          {{ libro?.genero }}
+        </h4>
+        <h4 class="w-full text-center" styleClass="w-full">
+          {{ libro?.anio }}
+        </h4>
+      </div>
+    </ng-template>
+  </p-card>
+</div>
